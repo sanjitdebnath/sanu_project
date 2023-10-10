@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        width: 100%;
+        /* position: relative; */
+      }
+      header {
+        position: static;
+        /* top: 0;
+            left: 0; */
+        width: 100%;
+        height: 10vh;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 50px;
+      }
+      .logo {
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .navlink ul {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navlink ul li {
+        padding: 10px 15px;
+    }
+    li{
+          list-style: none;
+
+      }
+      .navlink ul li a {
+        /* outline: none; */
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+        text-transform: uppercase;
+      }
+      .sendBox {
+        color: black;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      .carousel-item {
+        height: 90vh !important ;
+      }
+      .slideImg {
+        background-size: contain;
+      }
+      .about_us {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        position: relative;
+      }
+      .awesome_feature
+      {
+        width: 100%;
+        height: 130vh;
+        position: relative;
+        background-color: #2c3d4f;
+      }
+      .banner
+      {
+        width: 100%;
+        height: 175px;
+        overflow: hidden;
+        position: relative;
+        top: -170px;
+      }
+      .triangle-left {
+        position: absolute;
+        top: 50px;
+        left:-10%;
+        width: 60%;
+        height: 200px;
+        transform: rotate(10deg);
+        background-color: #2c3d4f;
+        /* z-index: ; */
+      }
+      .triangle-right
+      {
+        width: 60%;
+        height: 200px;
+        position: absolute;
+        top: 50px;
+        transform: rotate(-10deg);
+        background-color: #2c3d4f;
+        right: -10%;
+      }
+      .awesome_feature .title_and_desc
+      {
+        padding: 20px;
+        color: white;
+        transform: translateY(-170px);
+        text-align: center;
+      }
+      .awesome_feature .title_and_desc .title
+      {
+        margin-bottom: 20px;
+        font-size: 38px;
+        position: relative;
+    }
+      .awesome_feature .title_and_desc .title::after
+      {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 40%;
+        width: 250px;
+        height: 2px;
+        background-color: white;
+      }
+      .feature
+      {
+        width: 80%;
+        margin: auto;
+        height: 100vh;
+        color: white;
+        transform: translateY(-170px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .feature_left{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+      }
+      .feature_box
+      {
+        width: 400px;
+        display: flex;
+        padding: 20px;
+        
+      }
+      .feature_box .icon
+      {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+        border-radius: 50%;
+      }
+      .feature_box .features-content
+      {
+        width: 70%;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .feature_box .features-content p
+      {
+       font-size: 14px;
+       color: #d7dee6;
+      }
+
+      .banner-white
+      {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        bottom: 300px;
+      }
+      .triangle-left-white {
+        position: absolute;
+        bottom: -50px;
+        left:-10%;
+        width: 60%;
+        height: 200px;
+        transform: rotate(10deg);
+        background-color: #ffffff;
+        /* z-index: ; */
+      }
+      .triangle-right-white
+      {
+        width: 60%;
+        height: 200px;
+        position: absolute;
+        bottom: -50px;
+        transform: rotate(-10deg);
+        background-color: #ffffff;
+        right: -10%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header part -->
+    <header>
+      <div class="logo">
+        <!-- <a href="#"><img src="/images/logo.png" alt=""></a> -->
+        LOGO
+      </div>
+      <div class="navlink">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">features</a></li>
+          <li><a href="#">how its work</a></li>
+          <li><a href="#">server and pricing</a></li>
+          <li><a href="#">screenshots</a></li>
+        </ul>
+      </div>
+      <div class="sendBox">
+        <i class="fa-regular fa-envelope fa-beat"></i>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="images/img3.jpeg"
+            class="d-block w-100 slideImg"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="images/img1.jpg" class="d-block w-100 slideImg" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/img2.jpg" class="d-block w-100 slideImg" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- service section -->
+    <div class="about_us">
+      <h1>welcome to stone solution</h1>
+      <p>
+        Where you will experience first-class simplicity, for your garage
+        “needs”.
+      </p>
+
+      <div class="Bannner_images">
+          <img src="images/about_us.png" alt="" />
+        </div>
+    </div>
+    
+    <div class="awesome_feature">
+        <div class="banner">
+            <div class="triangle-left"></div>
+            <div class="triangle-right"></div>
+        </div>
+
+        <div class="title_and_desc">
+
+            <div class="title">AWESOME <span style="font-weight: bold;"> FEATURES </span></div>
+          <p>
+            Where you will experience first-class simplicity, for your garage
+            “needs”.
+          </p>
+        </div>
+
+        <div class="feature">
+
+            <!-- FEATURES LEFT -->
+            <div class="feature_left">
+
+                <div class="feature_box">
+                    <div class="icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="features-content">
+                        <h5>Search &amp; Filter</h5>
+                        <p>Do you have any specific needs for your car? Maybe you want to find a garage in your city? Whatever yospecific needs are, you can filter, and search, for the exact garage you need.</p>
+                    </div>
+                </div>
+
+                <div class="feature_box">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="features-content">
+                        <h5>Who can find me</h5>
+                        <p>As a garage business owner, you might want to control who can find your business, with Carmension you have full control over who can find, search, and view your business.</p>
+                    </div>
+                </div>
+            </div>
+
+            <img src="images/mobile.png" alt="">
+
+
+            <div class="feature_left">
+
+                <div class="feature_box">
+                    <div class="icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="features-content">
+                        <h5>Search &amp; Filter</h5>
+                        <p>Do you have any specific needs for your car? Maybe you want to find a garage in your city? Whatever yospecific needs are, you can filter, and search, for the exact garage you need.</p>
+                    </div>
+                </div>
+
+                <div class="feature_box">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="features-content">
+                        <h5>Who can find me</h5>
+                        <p>As a garage business owner, you might want to control who can find your business, with Carmension you have full control over who can find, search, and view your business.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="banner-white">
+            <div class="triangle-left-white"></div>
+            <div class="triangle-right-white"></div>
+        </div>
+
+
+            <!-- FEATURES RIGHT -->
+            <!-- <div class="col-md-4 col-md-push-4 col-sm-6">
+                <ul class="features-list features-list-right">
+                    <li class="features-list-item animated fadeInLeft visible" data-animation="fadeInLeft" data-animation-delay="1100">
+                        <i class="fa fa-comments"></i>
+                        <div class="features-content">
+                            <h5>Chat Support</h5>
+                            <p>Whenever you have an issue with something, you can get in touch with our support team, we are happy to help you.</p>
+                        </div>
+                    </li>
+                    <li class="features-list-item animated fadeInRight visible" data-animation="fadeInRight" data-animation-delay="500">
+                        <i class="fa  fa-eye"></i>
+                        <div class="features-content">
+                            <h5>Visibility</h5>
+                            <p>As a garage business owner you want to be visible to as many clients as possible, with Carmension you can easily be searched, found, and viewed by potential customers.</p>
+                        </div>
+                    </li>
+                    <li class="features-list-item animated fadeInRight visible" data-animation="fadeInRight" data-animation-delay="800">
+                        <i class="fa fa-cog"></i>
+                        <div class="features-content">
+                            <h5>Customized Offers</h5>
+                            <p>Upload your special offers with imagery or videos, so you can get more customers your way.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+
+            <!-- CLOSE UP PHONE IMAGE -->
+
+        </div>
+        
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"
+  ></script>
+</html>
